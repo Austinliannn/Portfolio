@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import '../styles/Navigationbar.css';
 import { IconContext } from 'react-icons';
+import { Col } from 'react-bootstrap';
 
 function Navigationbar(){
 
@@ -13,36 +14,41 @@ function Navigationbar(){
     const showSidebar = () => setSidebar(!sidebar);
 
     return(
-        <>
-            <IconContext.Provider value={{ color: "#fff" }}>
-                <div className="navbar d-flex justify-content-end">
-                    <span style={{color: "black"}}>Menu</span>
-                    <Link to="#" className="menu-bars">
-                        <FaIcons.FaBars style={{color: "black"}} onClick={showSidebar} />
-                    </Link>
-                </div>
+        <IconContext.Provider value={{ color: "white" }}>
+          <div className="navbar">
+              <Col className="d-flex justify-content-start">
+                  <span style={{color: "black"}}>Logo</span>
+              </Col>
 
-           <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
-             <ul className="nav-menu-items" onClick={showSidebar}>
-               <li className="navbar-toggle">
-                <Link to="#" className="menu-bars d-flex justify-content-end">
-                   <AiIcons.AiOutlineClose style={{color: "black"}}/>
-                 </Link>
-               </li>
-               
-               {SidebarData.map((item, index) => {
-                 return (
-                   <li key={index} className={item.sbName}>
-                     <Link to={item.path}>
-                       <span>{item.icon} &nbsp; {item.title}</span>
-                     </Link>
-                   </li>
-                 );
-               })}
-             </ul>
-           </nav>
-         </IconContext.Provider>
-        </>
+              <Col className="d-flex justify-content-end">
+                  <span style={{color: "black"}}>Menu</span>
+                  <Link to="#" className="menu-bars">
+                      <FaIcons.FaBars style={{color: "black"}} onClick={showSidebar} />
+                  </Link>
+              </Col>
+          </div>
+
+          
+          <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+            <ul className="nav-menu-items" onClick={showSidebar}>
+              <li className="navbar-toggle">
+                <Link to="#" className="menu-bars d-flex justify-content-end" style={{paddingRight: "10px"}}>
+                  <AiIcons.AiOutlineClose style={{color: "white"}}/>
+                </Link>
+              </li>
+              
+              {SidebarData.map((item, index) => {
+                return (
+                  <li key={index} className={item.sbName}>
+                    <Link style={{color: "white"}} to={item.path}>
+                      <span>{item.icon} &nbsp; {item.title}</span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+        </IconContext.Provider>
     );
 }
 

@@ -1,28 +1,31 @@
 .navbar {
     height: 80px;
+    position: fixed;
 }
 
 .menu-bars {
-    margin: -0.6rem 2rem 0 1rem;
-    font-size: 2.2rem;
+    margin: -0.6rem 0 0 1rem;
+    font-size: 1.8rem;
 }
 
 .nav-menu{
-    background-color: grey;
+    background-color: #393E46;
     width: 250px;
     height: 320px;
     display: flex;
     justify-content: center;
     position: fixed;
-    top: 0;
-    right: -100%;
+    top: -100%;
+    right: 19rem;
     transition: 850ms;
     border-radius: 20px;
+    z-index: 100;
 }
 
 .nav-menu.active {
-    right: 10px;
+    top: 0;
     transition: 350ms;
+    z-index: 100;
 }
 
 .nav-text {
@@ -35,7 +38,7 @@
 
 .nav-text a {
     text-decoration: none;
-    color: black;
+    color: #EEEEEE;
     font-size: 18px;
     width: 100%;
     height: 100%;
@@ -45,8 +48,8 @@
 }
 
 .nav-text a:hover {
-    background-color: #1a83ff;
-    height: 80%;
+    background-color: #00ADB5;
+    height: 100%;
     border-radius: 20px;
 }
 
@@ -56,7 +59,7 @@
 }
 
 .navbar-toggle {
-    background-color: grey;
+    background-color: #393E46;
     width: 100%;
     height: 80px;
     display: flex;
@@ -66,4 +69,34 @@
 
 span {
     margin-left: 16px;
+}
+
+@media screen and (max-width: 1400px) {
+    .nav-menu{
+        right: 4rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .nav-menu{
+        right: 2rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .nav-menu{
+        right: 6rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu{
+        right: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .nav-menu{
+        right: 0.2rem;
+    }
 }
