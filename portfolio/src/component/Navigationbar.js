@@ -6,6 +6,7 @@ import { SidebarData } from './SidebarData';
 import '../styles/Navigationbar.css';
 import { IconContext } from 'react-icons';
 import { Col } from 'react-bootstrap';
+import 'animate.css';
 
 function Navigationbar(){
 
@@ -27,9 +28,10 @@ function Navigationbar(){
                   </Link>
               </Col>
           </div>
-
           
-          <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+          <nav 
+            className={(sidebar) ? "nav-menu active animate__animated animate__fadeInDown" : "nav-menu animate__animated animate__fadeOutUp"}
+          >
             <ul className="nav-menu-items" onClick={showSidebar}>
               <li className="navbar-toggle">
                 <Link to="#" className="menu-bars d-flex justify-content-end" style={{paddingRight: "10px"}}>

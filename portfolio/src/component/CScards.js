@@ -1,20 +1,133 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Row, Col, Card } from 'react-bootstrap';
+import SW1_img1 from '../assets/WGW-img1.png';
+import SW2_img1 from '../assets/LS-img1.png';
+import { isMobile } from 'react-device-detect';
 
 export default function CScards(){
+
+    const [work1Hovered, setWork1Hovered] = useState(true);
+    const [work2Hovered, setWork2Hovered] = useState(false);
+    const [work3Hovered, setWork3Hovered] = useState(false);
+
+    const [work1Text, setWork1Text] = useState(true);
+    const [work2Text, setWork2Text] = useState(true);
+    const [work3Text, setWork3Text] = useState(true);
+
+    const handleMouseOverWork1 = () => {
+        setWork1Hovered(true);
+        setWork2Text(false);
+        setWork3Text(false);
+    };
+
+    const handleMouseOutWork1 = () => {
+        setWork2Text(true);
+        setWork3Text(true);
+    };
+
+    const handleMouseOverWork2 = () => {
+        setWork1Hovered(false);
+        setWork2Hovered(true);
+        setWork1Text(false);
+        setWork3Text(false);
+    };
+
+    const handleMouseOutWork2 = () => {
+        setWork1Hovered(true);
+        setWork2Hovered(false);
+        setWork1Text(true);
+        setWork3Text(true);
+    };
+
+    const handleMouseOverWork3 = () => {
+        setWork1Hovered(false);
+        setWork3Hovered(true);
+        setWork1Text(false);
+        setWork2Text(false);
+    };
+
+    const handleMouseOutWork3 = () => {
+        setWork1Hovered(true);
+        setWork3Hovered(false);
+        setWork1Text(true);
+        setWork2Text(true);
+    };
+
     return(
         <>
-            <Row className="py-2">
+            <Row className="py-2 pt-3">
                 <Col className="d-flex justify-content-center"> 
-                    <Card style={{width: "78%"}}>
+                    <Card style={(isMobile) ? {width: "96%", height: "44rem", border: "none"} : {width: "96%", height: "23rem", border: "none"}}>
                         <Card.Body>
                             <Row>
-                                <Col xs={12} md={5} lg={5} xl={5} xxl={5}>
-                                    This is another text from something else
-                                </Col>
+                                <Col xs={12} md={6} lg={6} xl={6} xxl={6}>
+                                    <Row>
+                                        <Col
+                                            className="animate__animated animate__fadeInDown" 
+                                            xs={12} md={4} lg={4} xl={4} xxl={4}
+                                            onMouseOver={handleMouseOverWork1} 
+                                            onMouseOut={handleMouseOutWork1}
+                                        >
+                                            <h5 className={(work1Text) ? "d-flex justify-content-center" : "d-none"}>
+                                                <b><u>Work Go Where</u></b>
+                                            </h5>
+                                        </Col>
 
-                                <Col xs={12} md={5} lg={5} xl={5} xxl={5}>
-                                    This is some text within a card body
+                                        <Col
+                                            className="animate__animated animate__fadeInDown"  
+                                            xs={12} md={4} lg={4} xl={4} xxl={4}
+                                            onMouseOver={handleMouseOverWork2} 
+                                            onMouseOut={handleMouseOutWork2}
+                                        >
+                                            <h5 className={(work2Text) ? "d-flex justify-content-center" : "d-none"}>
+                                                <b><u>Little Singapore</u></b>
+                                            </h5>
+                                        </Col>
+
+                                        <Col
+                                            className="animate__animated animate__fadeInDown"  
+                                            xs={12} md={4} lg={4} xl={4} xxl={4}
+                                            onMouseOver={handleMouseOverWork3} 
+                                            onMouseOut={handleMouseOutWork3}
+                                        >
+                                            <h5 className={(work3Text) ? "d-flex justify-content-center" : "d-none"}>
+                                                <b><u>Dashboards</u></b>
+                                            </h5>
+                                        </Col>
+                                    </Row>
+
+                                    {work1Hovered && 
+                                        <p className="d-flex justify-content-center pt-3 animate__animated animate__fadeInUp">
+                                            WorkGoWhere is a university project that aims to efficiently connect individuals to a suitable space for work or study.
+                                            Also, space owners gain new customers by listing their spaces in their account.<br/><br/>
+                                            Tools required: JavaScript, HTML, CSS, Tailwind CSS, MongoDB, Express.js, React.js & Node.js<br/><br/>
+                                            Agile Methodology adpoted: Scrum & Kanban<br/><br/>
+                                            FrameWorks adopted: MVC & MERN
+                                        </p>
+                                    }
+
+                                    {work2Hovered && 
+                                        <p className="d-flex justify-content-center pt-3 animate__animated animate__fadeInUp">
+                                            LittleSingapore is a university project that was built to advertise a made-up theme park.
+                                            The project aims to attract new customers, sell merchandise and efficiently provide information about the park. <br/><br/>
+                                            Tools required: JavaScript, HTML, CSS & Bootstrap<br/><br/>
+                                            Agile Methodology adpoted: Scrum<br/><br/>
+                                        </p>
+                                    }
+
+                                    {work3Hovered && 
+                                        <p className="d-flex justify-content-center pt-3 animate__animated animate__fadeInUp">
+                                            Some text about Lingjack Dashboards
+                                        </p>
+                                    }
+                                </Col>
+                                
+                                <Col 
+                                    className="d-flex justify-content-center"
+                                    xs={12} md={6} lg={6} xl={6} xxl={6}
+                                >
+                                    {work1Hovered && <img className="animate__animated animate__fadeInUp" src={SW1_img1} style={{width: "100%", border: "solid 1px grey", borderRadius: "10px"}}/>}
+                                    {work2Hovered && <img className="animate__animated animate__fadeInUp" src={SW2_img1} style={{width: "100%", border: "solid 1px grey", borderRadius: "10px"}}/>}
                                 </Col>
                             </Row>
                         </Card.Body>
