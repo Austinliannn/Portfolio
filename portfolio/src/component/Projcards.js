@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Row, Col, Card } from 'react-bootstrap';
 import SW1_img1 from '../assets/WGW-img1.png';
 import SW2_img1 from '../assets/LS-img1.png';
-import { isMobile } from 'react-device-detect';
 
 export default function CScards(){
 
@@ -55,50 +54,47 @@ export default function CScards(){
 
     return(
         <>
-            <Row className="py-2 pt-3">
-                <Col className="d-flex justify-content-center"> 
-                    <Card style={(isMobile) ? {width: "96%", height: "44rem", border: "none"} : {width: "96%", height: "23rem", border: "none"}}>
+            <Row className="pt-3">
+                <Col className="d-flex justify-content-center">
+                    <Card style={{border: "0px", width: "96%", minHeight: "23rem"}}>
                         <Card.Body>
                             <Row>
-                                <Col xs={12} md={6} lg={6} xl={6} xxl={6}>
+                                <Col xs={12} md={12} lg={5} xl={6} xxl={6}>
                                     <Row>
                                         <Col
-                                            className="animate__animated animate__fadeInDown" 
                                             xs={12} md={4} lg={4} xl={4} xxl={4}
                                             onMouseOver={handleMouseOverWork1} 
                                             onMouseOut={handleMouseOutWork1}
                                         >
-                                            <h5 className={(work1Text) ? "d-flex justify-content-center" : "d-none"}>
+                                            <h5 className={(work1Text) ? "d-flex justify-content-center animate__animated animate__fadeInDown" : "d-none"}>
                                                 <b><u>Work Go Where</u></b>
                                             </h5>
                                         </Col>
 
                                         <Col
-                                            className="animate__animated animate__fadeInDown"  
                                             xs={12} md={4} lg={4} xl={4} xxl={4}
                                             onMouseOver={handleMouseOverWork2} 
                                             onMouseOut={handleMouseOutWork2}
                                         >
-                                            <h5 className={(work2Text) ? "d-flex justify-content-center" : "d-none"}>
+                                            <h5 className={(work2Text) ? "d-flex justify-content-center animate__animated animate__fadeInDown" : "d-none"}>
                                                 <b><u>Little Singapore</u></b>
                                             </h5>
                                         </Col>
 
-                                        <Col
-                                            className="animate__animated animate__fadeInDown"  
+                                        <Col 
                                             xs={12} md={4} lg={4} xl={4} xxl={4}
                                             onMouseOver={handleMouseOverWork3} 
                                             onMouseOut={handleMouseOutWork3}
                                         >
-                                            <h5 className={(work3Text) ? "d-flex justify-content-center" : "d-none"}>
-                                                <b><u>Dashboards</u></b>
+                                            <h5 className={(work3Text) ? "d-flex justify-content-center animate__animated animate__fadeInDown" : "d-none"}>
+                                                <b><u>DJ Application</u></b>
                                             </h5>
                                         </Col>
                                     </Row>
 
                                     {work1Hovered && 
                                         <p className="d-flex justify-content-center pt-3 animate__animated animate__fadeInUp">
-                                            WorkGoWhere is a university project that aims to efficiently connect individuals to a suitable space for work or study.
+                                            WorkGoWhere aims to efficiently connect individuals to a suitable space for work or study.
                                             Also, space owners gain new customers by listing their spaces in their account.<br/><br/>
                                             Tools required: JavaScript, HTML, CSS, Tailwind CSS, MongoDB, Express.js, React.js & Node.js<br/><br/>
                                             Agile Methodology adpoted: Scrum & Kanban<br/><br/>
@@ -108,7 +104,7 @@ export default function CScards(){
 
                                     {work2Hovered && 
                                         <p className="d-flex justify-content-center pt-3 animate__animated animate__fadeInUp">
-                                            LittleSingapore is a university project that was built to advertise a made-up theme park.
+                                            LittleSingapore was built to advertise a made-up theme park.
                                             The project aims to attract new customers, sell merchandise and efficiently provide information about the park. <br/><br/>
                                             Tools required: JavaScript, HTML, CSS & Bootstrap<br/><br/>
                                             Agile Methodology adpoted: Scrum<br/><br/>
@@ -117,14 +113,14 @@ export default function CScards(){
 
                                     {work3Hovered && 
                                         <p className="d-flex justify-content-center pt-3 animate__animated animate__fadeInUp">
-                                            Some text about Lingjack Dashboards
+                                            Some text about DJ Application
                                         </p>
                                     }
                                 </Col>
                                 
                                 <Col 
                                     className="d-flex justify-content-center"
-                                    xs={12} md={6} lg={6} xl={6} xxl={6}
+                                    xs={12} md={12} lg={6} xl={6} xxl={6}
                                 >
                                     {work1Hovered && <img className="animate__animated animate__fadeInUp" src={SW1_img1} style={{width: "100%", border: "solid 1px grey", borderRadius: "10px"}}/>}
                                     {work2Hovered && <img className="animate__animated animate__fadeInUp" src={SW2_img1} style={{width: "100%", border: "solid 1px grey", borderRadius: "10px"}}/>}

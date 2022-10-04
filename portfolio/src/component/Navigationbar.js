@@ -17,12 +17,11 @@ function Navigationbar(){
     return(
         <IconContext.Provider value={{ color: "white" }}>
           <div className="navbar">
-              <Col className="d-flex justify-content-start">
+              <Col className="d-flex justify-content-left">
                   <span style={{color: "black"}}>Logo</span>
               </Col>
 
               <Col className="d-flex justify-content-end">
-                  <span style={{color: "black"}}>Menu</span>
                   <Link to="#" className="menu-bars">
                       <FaIcons.FaBars style={{color: "black"}} onClick={showSidebar} />
                   </Link>
@@ -30,7 +29,7 @@ function Navigationbar(){
           </div>
           
           <nav 
-            className={(sidebar) ? "nav-menu active animate__animated animate__fadeInDown" : "nav-menu animate__animated animate__fadeOutUp"}
+            className={(sidebar) ? "nav-menu active" : "nav-menu"}
           >
             <ul className="nav-menu-items" onClick={showSidebar}>
               <li className="navbar-toggle">

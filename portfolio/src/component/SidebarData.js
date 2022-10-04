@@ -1,6 +1,5 @@
 import React from 'react';
 import * as AiIcons from 'react-icons/ai';
-import * as IoIcons from 'react-icons/io';
 
 export const SidebarData = [
     {
@@ -19,12 +18,6 @@ export const SidebarData = [
         title: "View Projects",
         path: "/projects",
         icon: <AiIcons.AiOutlineFundProjectionScreen />,
-        sbName: "nav-text"
-    },
-    {
-        title: "Lets Work Together",
-        path: "/contactme",
-        icon: <IoIcons.IoIosContact />,
         sbName: "nav-text"
     },
 ]
