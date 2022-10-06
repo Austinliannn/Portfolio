@@ -1,135 +1,35 @@
-import React, { useState } from 'react';
-import { Row, Col, Card } from 'react-bootstrap';
-import SW1_img1 from '../assets/WGW-img1.png';
-import SW2_img1 from '../assets/LS-img1.png';
+import React from 'react';
+import { Col, Card } from 'react-bootstrap';
+import * as BsIcons from 'react-icons/bs';
 
-export default function CScards(){
+export default function Projcards(props) {
+  return (
+    <>
+        {
+            props.data.map((entry, index) => (
+                <Col key={index} xs={12} md={12} lg={4} xl={4} xxl={4} className="py-3">
+                    <Card className="animate__animated animate__fadeInLeft">
+                        <Card.Img variant="top" src={entry.img} style={{height: "10rem", borderBottomRightRadius : "5px", borderBottomLeftRadius : "5px"}}/>
 
-    const [work1Hovered, setWork1Hovered] = useState(true);
-    const [work2Hovered, setWork2Hovered] = useState(false);
-    const [work3Hovered, setWork3Hovered] = useState(false);
+                        <Card.Body className="pt-0 py-0 ">
+                            <Card.Title className="d-flex justify-content-left pt-3" style={{fontSize: "1.2em"}}><u>{entry.title}</u></Card.Title>
 
-    const [work1Text, setWork1Text] = useState(true);
-    const [work2Text, setWork2Text] = useState(true);
-    const [work3Text, setWork3Text] = useState(true);
+                            <Card.Text className="d-flex justify-content-left align-items-center p-0" style={{fontSize: "0.8em"}}>
+                                    {entry.description}
+                            </Card.Text>
 
-    const handleMouseOverWork1 = () => {
-        setWork1Hovered(true);
-        setWork2Text(false);
-        setWork3Text(false);
-    };
-
-    const handleMouseOutWork1 = () => {
-        setWork2Text(true);
-        setWork3Text(true);
-    };
-
-    const handleMouseOverWork2 = () => {
-        setWork1Hovered(false);
-        setWork2Hovered(true);
-        setWork1Text(false);
-        setWork3Text(false);
-    };
-
-    const handleMouseOutWork2 = () => {
-        setWork1Hovered(true);
-        setWork2Hovered(false);
-        setWork1Text(true);
-        setWork3Text(true);
-    };
-
-    const handleMouseOverWork3 = () => {
-        setWork1Hovered(false);
-        setWork3Hovered(true);
-        setWork1Text(false);
-        setWork2Text(false);
-    };
-
-    const handleMouseOutWork3 = () => {
-        setWork1Hovered(true);
-        setWork3Hovered(false);
-        setWork1Text(true);
-        setWork2Text(true);
-    };
-
-    return(
-        <>
-            <Row className="pt-3">
-                <Col className="d-flex justify-content-center">
-                    <Card style={{border: "0px", width: "96%", minHeight: "23rem"}}>
-                        <Card.Body>
-                            <Row>
-                                <Col xs={12} md={12} lg={5} xl={6} xxl={6}>
-                                    <Row>
-                                        <Col
-                                            xs={12} md={4} lg={4} xl={4} xxl={4}
-                                            onMouseOver={handleMouseOverWork1} 
-                                            onMouseOut={handleMouseOutWork1}
-                                        >
-                                            <h5 className={(work1Text) ? "d-flex justify-content-center animate__animated animate__fadeInDown" : "d-none"}>
-                                                <b><u>Work Go Where</u></b>
-                                            </h5>
-                                        </Col>
-
-                                        <Col
-                                            xs={12} md={4} lg={4} xl={4} xxl={4}
-                                            onMouseOver={handleMouseOverWork2} 
-                                            onMouseOut={handleMouseOutWork2}
-                                        >
-                                            <h5 className={(work2Text) ? "d-flex justify-content-center animate__animated animate__fadeInDown" : "d-none"}>
-                                                <b><u>Little Singapore</u></b>
-                                            </h5>
-                                        </Col>
-
-                                        <Col 
-                                            xs={12} md={4} lg={4} xl={4} xxl={4}
-                                            onMouseOver={handleMouseOverWork3} 
-                                            onMouseOut={handleMouseOutWork3}
-                                        >
-                                            <h5 className={(work3Text) ? "d-flex justify-content-center animate__animated animate__fadeInDown" : "d-none"}>
-                                                <b><u>DJ Application</u></b>
-                                            </h5>
-                                        </Col>
-                                    </Row>
-
-                                    {work1Hovered && 
-                                        <p className="d-flex justify-content-center pt-3 animate__animated animate__fadeInUp">
-                                            WorkGoWhere aims to efficiently connect individuals to a suitable space for work or study.
-                                            Also, space owners gain new customers by listing their spaces in their account.<br/><br/>
-                                            Tools required: JavaScript, HTML, CSS, Tailwind CSS, MongoDB, Express.js, React.js & Node.js<br/><br/>
-                                            Agile Methodology adpoted: Scrum & Kanban<br/><br/>
-                                            FrameWorks adopted: MVC & MERN
-                                        </p>
-                                    }
-
-                                    {work2Hovered && 
-                                        <p className="d-flex justify-content-center pt-3 animate__animated animate__fadeInUp">
-                                            LittleSingapore was built to advertise a made-up theme park.
-                                            The project aims to attract new customers, sell merchandise and efficiently provide information about the park. <br/><br/>
-                                            Tools required: JavaScript, HTML, CSS & Bootstrap<br/><br/>
-                                            Agile Methodology adpoted: Scrum<br/><br/>
-                                        </p>
-                                    }
-
-                                    {work3Hovered && 
-                                        <p className="d-flex justify-content-center pt-3 animate__animated animate__fadeInUp">
-                                            Some text about DJ Application
-                                        </p>
-                                    }
-                                </Col>
-                                
-                                <Col 
-                                    className="d-flex justify-content-center"
-                                    xs={12} md={12} lg={6} xl={6} xxl={6}
-                                >
-                                    {work1Hovered && <img className="animate__animated animate__fadeInUp" src={SW1_img1} style={{width: "100%", border: "solid 1px grey", borderRadius: "10px"}}/>}
-                                    {work2Hovered && <img className="animate__animated animate__fadeInUp" src={SW2_img1} style={{width: "100%", border: "solid 1px grey", borderRadius: "10px"}}/>}
-                                </Col>
-                            </Row>
+                            <Card.Text className="d-flex justify-content-left align-items-center p-0" style={{fontSize: "1.2em"}}>
+                                <BsIcons.BsArrowRightCircleFill/> 
+                                &nbsp; &nbsp; 
+                                <BsIcons.BsGithub/> 
+                                &nbsp; &nbsp;
+                                <BsIcons.BsPlayBtnFill/>
+                            </Card.Text>
                         </Card.Body>
                     </Card>
                 </Col>
-            </Row>
-        </>
-    );
+            ))
+        }
+    </>
+  );
 }

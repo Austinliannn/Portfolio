@@ -1,22 +1,23 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles/Global.css';
+import NavigationBar from "./component/NavigationBar";
 import Home from './pages/Home/Home';
 import Aboutme from './pages/About Me/Aboutme';
 import Projects from "./pages/Projects/Projects";
+import { Container } from 'react-bootstrap';
 
 function App() {
   return (
     <>
       <Router>
+        <Container>
+            <NavigationBar/>
+        </Container>
+        
         <Routes>
-{/* Route to Home page */}
           <Route path="/" element={<Home />} />
-
-{/* Route to About Me page */}
           <Route path="/aboutme" element={<Aboutme />} />
-
-{/* Route to Projects page */}
           <Route path="/projects" element={<Projects />} />
         </Routes>
       </Router>
