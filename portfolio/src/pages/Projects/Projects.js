@@ -17,7 +17,7 @@ export default function Projects(){
     return(
         <>
             <Container id="projects" className="d-flex justify-content-center pb-2">
-                <Col xs={12} md={12} lg={10} xl={10} xxl={10}>
+                <Col xs={12} md={12} lg={11} xl={11} xxl={11}>
                     <Row className="d-flex justify-content-center">
                         <Row>
                             <h1 className="d-flex justify-content-end animate__animated animate__fadeInRight">

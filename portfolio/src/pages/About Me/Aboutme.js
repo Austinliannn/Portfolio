@@ -11,6 +11,7 @@ import tailwind_css_logo from '../../assets/Images/SkillsLogo/tailwind-css.png';
 import mongodb_logo from '../../assets/Images/SkillsLogo/mongodb.png';
 import express_logo from '../../assets/Images/SkillsLogo/express.png';
 import nodejs_logo from '../../assets/Images/SkillsLogo/nodejs.png';
+import certification from '../../assets/Images/SkillsLogo/Certification_Web.png';
 import Contact from '../../component/Contact';
 
 export default function Aboutme(){
@@ -29,7 +30,7 @@ export default function Aboutme(){
         <>
             <Container id="intro" className="pb-2">
                 <Row className="animate__animated animate__fadeInRight">
-                    <Col xs={12} md={12} lg={10} xl={10} xxl={10}>
+                    <Col xs={12} md={12} lg={11} xl={11} xxl={11}>
                         <h1 className="d-flex justify-content-end"><u>About Me</u></h1>
                     </Col>
                 </Row>
@@ -65,104 +66,125 @@ export default function Aboutme(){
                 </a>
             </Container>
 
-            <Container id="skills" className="d-flex justify-content-center align-items-center py-4">
-                <Col xs={12} md={12} lg={8} xl={8} xxl={8} className="pt-5">   
-                    <Row>
-                        <h1 className="d-flex justify-content-center animate__animated animate__fadeInDown">
-                            <u>Professional Skills</u>  
-                        </h1>
-                    </Row>
+            <Container id="skills" className="py-4">
+                <Row className="d-flex justify-content-center">
+                    <Col xs={12} md={12} lg={6} xl={6} xxl={6} className="pt-5">   
+                        <Row>
+                            <h1 className="d-flex justify-content-center animate__animated animate__fadeInDown">
+                                <u>Professional Skills</u>  
+                            </h1>
+                        </Row>
 
-                    <Row className="pb-3 pt-4 animate__animated animate__fadeIn">
-                        <Col xs={4} md={4} lg={4} xl={4} xxl={4} className="d-flex justify-content-center align-items-center">
-                            <img 
-                                className={(mouseHoverJS) ? "animate__animated animate__heartBeat" : "animate__animated animate__pulse"}
-                                src={js_logo}
-                                style= {{width: "42%"}}
-                                onMouseOver={()=>(setMouseHoverJS(!mouseHoverJS))}
-                                onMouseOut={()=>(setMouseHoverJS(!mouseHoverJS))}
-                            />
-                        </Col>
+                        <Row className="pb-3 pt-4 animate__animated animate__fadeIn">
+                            <Col xs={4} md={4} lg={4} xl={4} xxl={4} className="d-flex justify-content-center align-items-center">
+                                <img 
+                                    className={(mouseHoverJS) ? "animate__animated animate__heartBeat" : "animate__animated animate__pulse"}
+                                    src={js_logo}
+                                    style= {{width: "42%"}}
+                                    onMouseOver={()=>(setMouseHoverJS(!mouseHoverJS))}
+                                    onMouseOut={()=>(setMouseHoverJS(!mouseHoverJS))}
+                                />
+                            </Col>
 
-                        <Col xs={4} md={4} lg={4} xl={4} xxl={4} className="d-flex justify-content-center align-items-center">
-                            <img 
-                                className={(mouseHoverHTML) ? "animate__animated animate__heartBeat" : "animate__animated animate__pulse"}
-                                src={html_logo}
-                                style= {{width: "42%"}}
-                                onMouseOver={()=>(setMouseHoverHTML(!mouseHoverHTML))}
-                                onMouseOut={()=>(setMouseHoverHTML(!mouseHoverHTML))}
-                            />
-                        </Col>
+                            <Col xs={4} md={4} lg={4} xl={4} xxl={4} className="d-flex justify-content-center align-items-center">
+                                <img 
+                                    className={(mouseHoverHTML) ? "animate__animated animate__heartBeat" : "animate__animated animate__pulse"}
+                                    src={html_logo}
+                                    style= {{width: "42%"}}
+                                    onMouseOver={()=>(setMouseHoverHTML(!mouseHoverHTML))}
+                                    onMouseOut={()=>(setMouseHoverHTML(!mouseHoverHTML))}
+                                />
+                            </Col>
 
-                        <Col xs={4} md={4} lg={4} xl={4} xxl={4} className="d-flex justify-content-center align-items-center">
-                            <img 
-                                className={(mouseHoverCSS) ? "animate__animated animate__heartBeat" : "animate__animated animate__pulse"}
-                                src={css_logo}
-                                style= {{width: "42%"}}
-                                onMouseOver={()=>(setMouseHoverCSS(!mouseHoverCSS))}
-                                onMouseOut={()=>(setMouseHoverCSS(!mouseHoverCSS))}
-                            />
-                        </Col>
-                    </Row>
+                            <Col xs={4} md={4} lg={4} xl={4} xxl={4} className="d-flex justify-content-center align-items-center">
+                                <img 
+                                    className={(mouseHoverCSS) ? "animate__animated animate__heartBeat" : "animate__animated animate__pulse"}
+                                    src={css_logo}
+                                    style= {{width: "42%"}}
+                                    onMouseOver={()=>(setMouseHoverCSS(!mouseHoverCSS))}
+                                    onMouseOut={()=>(setMouseHoverCSS(!mouseHoverCSS))}
+                                />
+                            </Col>
+                        </Row>
 
-                    <Row className="py-3 animate__animated animate__fadeIn">
-                        <Col xs={4} md={4} lg={4} xl={4} xxl={4} className="d-flex justify-content-center align-items-center">
-                            <img 
-                                className={(mouseHoverTWCSS) ? "animate__animated animate__heartBeat" : "animate__animated animate__pulse"}
-                                src={tailwind_css_logo}
-                                style= {{width: "42%"}}
-                                onMouseOver={()=>(setMouseHoverTWCSS(!mouseHoverTWCSS))}
-                                onMouseOut={()=>(setMouseHoverTWCSS(!mouseHoverTWCSS))}
-                            />
-                        </Col>
-                    
-                        <Col xs={4} md={4} lg={4} xl={4} xxl={4} className="d-flex justify-content-center align-items-center">
-                            <img 
-                                className={(mouseHoverMGDB) ? "animate__animated animate__heartBeat" : "animate__animated animate__pulse"}
-                                src={mongodb_logo}
-                                style= {{width: "42%"}}
-                                onMouseOver={()=>(setMouseHoverMGDB(!mouseHoverMGDB))}
-                                onMouseOut={()=>(setMouseHoverMGDB(!mouseHoverMGDB))}
-                            />
-                        </Col>
+                        <Row className="py-3 animate__animated animate__fadeIn">
+                            <Col xs={4} md={4} lg={4} xl={4} xxl={4} className="d-flex justify-content-center align-items-center">
+                                <img 
+                                    className={(mouseHoverTWCSS) ? "animate__animated animate__heartBeat" : "animate__animated animate__pulse"}
+                                    src={tailwind_css_logo}
+                                    style= {{width: "42%"}}
+                                    onMouseOver={()=>(setMouseHoverTWCSS(!mouseHoverTWCSS))}
+                                    onMouseOut={()=>(setMouseHoverTWCSS(!mouseHoverTWCSS))}
+                                />
+                            </Col>
+                        
+                            <Col xs={4} md={4} lg={4} xl={4} xxl={4} className="d-flex justify-content-center align-items-center">
+                                <img 
+                                    className={(mouseHoverMGDB) ? "animate__animated animate__heartBeat" : "animate__animated animate__pulse"}
+                                    src={mongodb_logo}
+                                    style= {{width: "42%"}}
+                                    onMouseOver={()=>(setMouseHoverMGDB(!mouseHoverMGDB))}
+                                    onMouseOut={()=>(setMouseHoverMGDB(!mouseHoverMGDB))}
+                                />
+                            </Col>
 
-                        <Col xs={4} md={4} lg={4} xl={4} xxl={4} className="d-flex justify-content-center align-items-center">
-                            <img 
-                                className={(mouseHoverEX) ? "animate__animated animate__heartBeat" : "animate__animated animate__pulse"}
-                                src={express_logo}
-                                style= {{width: "42%"}}
-                                onMouseOver={()=>(setMouseHoverEX(!mouseHoverEX))}
-                                onMouseOut={()=>(setMouseHoverEX(!mouseHoverEX))}
-                            />
-                        </Col>
-                    </Row>
+                            <Col xs={4} md={4} lg={4} xl={4} xxl={4} className="d-flex justify-content-center align-items-center">
+                                <img 
+                                    className={(mouseHoverEX) ? "animate__animated animate__heartBeat" : "animate__animated animate__pulse"}
+                                    src={express_logo}
+                                    style= {{width: "42%"}}
+                                    onMouseOver={()=>(setMouseHoverEX(!mouseHoverEX))}
+                                    onMouseOut={()=>(setMouseHoverEX(!mouseHoverEX))}
+                                />
+                            </Col>
+                        </Row>
 
-                    <Row className="pb-4 pt-3 animate__animated animate__fadeIn">
-                        <Col xs={4} md={4} lg={4} xl={4} xxl={4} className="d-flex justify-content-center align-items-center">
-                            <img 
-                                className={(mouseHoverRE) ? "animate__animated animate__heartBeat" : "animate__animated animate__pulse"}
-                                src={react_logo}
-                                style= {{width: "42%"}}
-                                onMouseOver={()=>(setMouseHoverRE(!mouseHoverRE))}
-                                onMouseOut={()=>(setMouseHoverRE(!mouseHoverRE))}
-                            />
-                        </Col>
+                        <Row className="pb-4 pt-3 animate__animated animate__fadeIn">
+                            <Col xs={4} md={4} lg={4} xl={4} xxl={4} className="d-flex justify-content-center align-items-center">
+                                <img 
+                                    className={(mouseHoverRE) ? "animate__animated animate__heartBeat" : "animate__animated animate__pulse"}
+                                    src={react_logo}
+                                    style= {{width: "42%"}}
+                                    onMouseOver={()=>(setMouseHoverRE(!mouseHoverRE))}
+                                    onMouseOut={()=>(setMouseHoverRE(!mouseHoverRE))}
+                                />
+                            </Col>
 
-                        <Col xs={4} md={4} lg={4} xl={4} xxl={4} className="d-flex justify-content-center align-items-center">
-                            <img 
-                                className={(mouseHoverNJS) ? "animate__animated animate__heartBeat" : "animate__animated animate__pulse"}
-                                src={nodejs_logo}
-                                style= {{width: "42%"}}
-                                onMouseOver={()=>(setMouseHoverNJS(!mouseHoverNJS))}
-                                onMouseOut={()=>(setMouseHoverNJS(!mouseHoverNJS))}
-                            />
-                        </Col>
-                    </Row>
+                            <Col xs={4} md={4} lg={4} xl={4} xxl={4} className="d-flex justify-content-center align-items-center">
+                                <img 
+                                    className={(mouseHoverNJS) ? "animate__animated animate__heartBeat" : "animate__animated animate__pulse"}
+                                    src={nodejs_logo}
+                                    style= {{width: "42%"}}
+                                    onMouseOver={()=>(setMouseHoverNJS(!mouseHoverNJS))}
+                                    onMouseOut={()=>(setMouseHoverNJS(!mouseHoverNJS))}
+                                />
+                            </Col>
+                        </Row>
+                    </Col>
 
-                    <a href="#contact" className="d-flex justify-content-center pt-5">
-                        <FiIcons.FiChevronsDown className="animate__animated animate__bounce" style= {{opacity: "0.5", fontSize: "20px", color: "#222831"}}/>
-                    </a>
-                </Col>
+                    <Col xs={12} md={12} lg={6} xl={6} xxl={6} className="pt-5">
+                        <Row>
+                            <h1 className="d-flex justify-content-center animate__animated animate__fadeInDown">
+                                <u>Certificates</u>  
+                            </h1>
+
+                            <a href="https://ude.my/UC-ceb193aa-b133-436b-9904-c30d3320d76a" target="_blank" rel="noreferrer" className="d-flex justify-content-center">
+                                View Certification
+                            </a> 
+                        </Row>
+                        
+                        <Row className="d-flex justify-content-center pt-3">
+                            <img 
+                                src={certification}
+                                style= {{borderRadius: "10px", width: "80%"}}
+                            />       
+                        </Row>
+                    </Col>
+                </Row>
+                
+                <a href="#contact" className="d-flex justify-content-center pt-5">
+                    <FiIcons.FiChevronsDown className="animate__animated animate__bounce" style= {{opacity: "0.5", fontSize: "20px", color: "#222831"}}/>
+                </a>
             </Container>
 
             <Container id="contact" className="d-flex justify-content-center align-items-center pt-4" style={{minHeight: "32rem"}}>

@@ -28,15 +28,15 @@ export default function Contact() {
                         <SiIcons.SiGmail/> 
                     </a>
                     &nbsp; &nbsp; &nbsp; 
-                    <a href="https://www.instagram.com/austinliannn/" target="_blank" style={{color: "#222831"}}>
+                    <a href="https://www.instagram.com/austinliannn/" target="_blank" rel="noreferrer" style={{color: "#222831"}}>
                         <BsIcons.BsInstagram/> 
                     </a>
                     &nbsp; &nbsp; &nbsp; 
-                    <a href="https://www.linkedin.com/in/austin-lian-394337215/" target="_blank" style={{color: "#222831"}}>
+                    <a href="https://www.linkedin.com/in/austin-lian-394337215/" target="_blank" rel="noreferrer" style={{color: "#222831"}}>
                         <BsIcons.BsLinkedin/>
                     </a>
                         &nbsp; &nbsp; &nbsp; 
-                    <a href="https://github.com/Austinliannn" target="_blank" style={{color: "#222831"}}>
+                    <a href="https://github.com/Austinliannn" target="_blank" rel="noreferrer" style={{color: "#222831"}}>
                         <BsIcons.BsGithub/>
                     </a>
                 </span>
