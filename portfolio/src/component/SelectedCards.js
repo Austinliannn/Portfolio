@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Row, Col, Card } from 'react-bootstrap';
-import SW1_img1 from '../assets/WGW-img1.png';
-import SW2_img1 from '../assets/LS-img1.png';
-import SW3_img1 from '../assets/DJApp-img1.png';
+import SW1_img1 from '../assets/Images/WGW-img1.png';
+import SW2_img1 from '../assets/Images/LS-img1.png';
+import SW3_img1 from '../assets/Images/DJApp-img1.png';
 
 export default function CScards(){
 
@@ -94,29 +94,29 @@ export default function CScards(){
                                     </Row>
 
                                     {work1Hovered && 
-                                        <p className="d-flex justify-content-center pt-3 animate__animated animate__fadeInUp">
+                                        <p className="d-flex justify-content-center pt-3 animate__animated animate__fadeInUp" style={{fontSize: "0.9em"}}>
                                             WorkGoWhere aims to efficiently connect individuals to a suitable space listed by owners for work or study.<br/><br/>
-                                            Tools required: JavaScript, HTML, CSS, Tailwind CSS, MongoDB, Express.js, React.js & Node.js<br/><br/>
-                                            Agile Methodology and FrameWorks adpoted: Scrum & Kanban, MVC & MERN
+                                            Skills required: <br/>JavaScript, HTML, CSS, Tailwind CSS, MongoDB, ExpressJS, ReactJS, NodeJS<br/><br/>
+                                            Agile Methodology and Frameworks adpoted: <br/>Scrum, Kanban, MVC, MERN
                                         </p>
                                     }
 
                                     {work2Hovered && 
-                                        <p className="d-flex justify-content-center pt-3 animate__animated animate__fadeInUp">
+                                        <p className="d-flex justify-content-center pt-3 animate__animated animate__fadeInUp" style={{fontSize: "0.9em"}}>
                                             LittleSingapore was built to advertise a made-up theme park.
                                             The project aims to attract new customers, sell merchandise and efficiently provide information about the park. <br/><br/>
-                                            Tools required: JavaScript, HTML, CSS & Bootstrap<br/><br/>
-                                            Agile Methodology adpoted: Scrum
+                                            Skills required: <br/>JavaScript, HTML, CSS & Bootstrap<br/><br/>
+                                            Agile Methodology and Frameworks adpoted: <br/>Scrum, Object-Oriented-Programming
                                         </p>
                                     }
 
                                     {work3Hovered && 
-                                        <p className="d-flex justify-content-center pt-3 animate__animated animate__fadeInUp">
+                                        <p className="d-flex justify-content-center pt-3 animate__animated animate__fadeInUp" style={{fontSize: "0.9em"}}>
                                             DJ Application is a software that aims to customize and mix tracks together, replicating a DJ set.
                                             This software is built with OOP frameworks and is loosely coupled to ensure functionality.
                                              <br/><br/>
-                                            Tools required: C++, ProJucer & Visual Studios 2022<br/><br/>
-                                            FrameWorks adopted: Object-Oriented-Programming
+                                             Skills required: <br/>C++, JUCE, Visual Studios 2022<br/><br/>
+                                            Frameworks adopted: <br/>Object-Oriented-Programming
                                         </p>
                                     }
                                 </Col>
@@ -125,9 +125,9 @@ export default function CScards(){
                                     className="d-flex justify-content-center"
                                     xs={12} md={12} lg={6} xl={6} xxl={6}
                                 >
-                                    {work1Hovered && <img className="animate__animated animate__fadeInUp" src={SW1_img1} style={{width: "100%", border: "solid 1px grey", borderRadius: "10px"}}/>}
-                                    {work2Hovered && <img className="animate__animated animate__fadeInUp" src={SW2_img1} style={{width: "100%", border: "solid 1px grey", borderRadius: "10px"}}/>}
-                                    {work3Hovered && <img className="animate__animated animate__fadeInUp" src={SW3_img1} style={{width: "100%", border: "solid 1px grey", borderRadius: "10px"}}/>}
+                                    {work1Hovered && <img className="animate__animated animate__fadeInUp" src={SW1_img1} style={{width: "100%", border: "solid 2px grey", borderRadius: "10px"}}/>}
+                                    {work2Hovered && <img className="animate__animated animate__fadeInUp" src={SW2_img1} style={{width: "100%", border: "solid 2px grey", borderRadius: "10px"}}/>}
+                                    {work3Hovered && <img className="animate__animated animate__fadeInUp" src={SW3_img1} style={{width: "100%", border: "solid 2px grey", borderRadius: "10px"}}/>}
                                 </Col>
                             </Row>
                         </Card.Body>

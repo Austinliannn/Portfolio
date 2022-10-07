@@ -46,11 +46,9 @@ export default function Home(){
                     </Col>
                 </Row>
 
-                <Row className="d-flex justify-content-center pt-5">
-                    <a href="#works" className="d-flex justify-content-center">
-                        <FiIcons.FiChevronsDown className="animate__animated animate__bounce" style= {{opacity: "0.5", fontSize: "20px", color: "#222831"}}/>
-                    </a>
-                </Row>
+                <a href="#works" className="d-flex justify-content-center pt-5">
+                    <FiIcons.FiChevronsDown className="animate__animated animate__bounce" style= {{opacity: "0.5", fontSize: "20px", color: "#222831"}}/>
+                </a>
             </Container>
 
             <Container id="works" className="py-4">
@@ -68,11 +66,9 @@ export default function Home(){
                     </Col>
                 </Row>
                 
-                <Row className="pt-4">
-                    <a href="#contact" className="d-flex justify-content-center">
-                        <FiIcons.FiChevronsDown className="animate__animated animate__bounce" style= {{opacity: "0.5", fontSize: "20px", color: "#222831"}}/>
-                    </a>
-                </Row>
+                <a href="#contact" className="d-flex justify-content-center pt-4">
+                    <FiIcons.FiChevronsDown className="animate__animated animate__bounce" style= {{opacity: "0.5", fontSize: "20px", color: "#222831"}}/>
+                </a>
             </Container>
 
             <Container id="contact" className="d-flex justify-content-center align-items-center pt-4" style={{minHeight: "32rem"}}>
