@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Row, Col, Card } from 'react-bootstrap';
-import SW1_img1 from '../assets/Images/WGW-img1.png';
-import SW2_img1 from '../assets/Images/LS-img1.png';
-import SW3_img1 from '../assets/Images/DJApp-img1.png';
+import Case1Img from '../assets/Images/WorkGoWhere/FrontPage.png';
+import Case2Img from '../assets/Images/LS-img1.png';
+import Case3Img from '../assets/Images/DJApp-img1.png';
 
 export default function CScards(){
 
@@ -82,7 +82,7 @@ export default function CScards(){
                                             </h5>
                                         </Col>
 
-                                        <Col 
+                                        {/* <Col 
                                             xs={12} md={4} lg={4} xl={4} xxl={4}
                                             onMouseOver={handleMouseOverWork3} 
                                             onMouseOut={handleMouseOutWork3}
@@ -90,7 +90,7 @@ export default function CScards(){
                                             <h5 className={(work3Text) ? "d-flex justify-content-center animate__animated animate__fadeInDown" : "d-none"}>
                                                 <b><u>DJ Application</u></b>
                                             </h5>
-                                        </Col>
+                                        </Col> */}
                                     </Row>
 
                                     {work1Hovered && 
@@ -110,7 +110,7 @@ export default function CScards(){
                                         </p>
                                     }
 
-                                    {work3Hovered && 
+                                    {/* {work3Hovered && 
                                         <p className="d-flex justify-content-center pt-3 animate__animated animate__fadeInUp" style={{fontSize: "0.9em"}}>
                                             DJ Application is a software that aims to customize and mix tracks together, replicating a DJ set.
                                             This software is built with OOP frameworks and is loosely coupled to ensure functionality.
@@ -118,16 +118,16 @@ export default function CScards(){
                                              Skills required: <br/>C++, JUCE, Visual Studios 2022<br/><br/>
                                             Frameworks adopted: <br/>Object-Oriented-Programming
                                         </p>
-                                    }
+                                    } */}
                                 </Col>
                                 
                                 <Col 
                                     className="d-flex justify-content-center"
                                     xs={12} md={12} lg={6} xl={6} xxl={6}
                                 >
-                                    {work1Hovered && <img className="animate__animated animate__fadeInUp" src={SW1_img1} style={{width: "100%", border: "solid 2px grey", borderRadius: "10px"}}/>}
-                                    {work2Hovered && <img className="animate__animated animate__fadeInUp" src={SW2_img1} style={{width: "100%", border: "solid 2px grey", borderRadius: "10px"}}/>}
-                                    {work3Hovered && <img className="animate__animated animate__fadeInUp" src={SW3_img1} style={{width: "100%", border: "solid 2px grey", borderRadius: "10px"}}/>}
+                                    {work1Hovered && <img className="animate__animated animate__fadeInUp" src={Case1Img} style={{width: "90%", border: "solid 2px grey", borderRadius: "10px"}}/>}
+                                    {work2Hovered && <img className="animate__animated animate__fadeInUp" src={Case2Img} style={{width: "100%", border: "solid 2px grey", borderRadius: "10px"}}/>}
+                                    {/* {work3Hovered && <img className="animate__animated animate__fadeInUp" src={Case3Img} style={{width: "100%", border: "solid 2px grey", borderRadius: "10px"}}/>} */}
                                 </Col>
                             </Row>
                         </Card.Body>
