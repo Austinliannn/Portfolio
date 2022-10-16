@@ -1,5 +1,5 @@
 import Case1Img from '../../assets/Images/WorkGoWhere/FrontPage.png';
-import Case2Img from '../../assets/Images/LS-img1.png';
+import Case2Img from '../../assets/Images/LittleSingapore/FrontPage.png';
 import Case3Img from '../../assets/Images/DJApp-img1.png';
 
 export default function ProjectDetails() {

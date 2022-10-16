@@ -50,7 +50,7 @@ export default function WorkGoWhere() {
                         <span className="d-flex justify-content-left pt-3" style={{fontSize: "0.8em", color: "#393E46"}}>
                             Skills: JavaScript, HTML, CSS, Tailwind CSS, MongoDB, ExpressJS, ReactJS, NodeJS <br/> <br/> 
                             Tools: Visual Studios Code, Figma, Jira, Discord, Github <br/> <br/> 
-                            Framework & Library: MVC, MERN, Bootstrap, NPM  <br/> <br/> 
+                            Framework & Library: MVC, MERN, Bootstrap, NPM
                         </span>
 
                         <span className="d-flex justify-content-end" style={{fontSize: "1.4em", color: "#393E46"}}>

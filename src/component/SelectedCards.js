@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Row, Col, Card } from 'react-bootstrap';
 import Case1Img from '../assets/Images/WorkGoWhere/FrontPage.png';
-import Case2Img from '../assets/Images/LS-img1.png';
+import Case2Img from '../assets/Images/LittleSingapore/FrontPage.png';
 import Case3Img from '../assets/Images/DJApp-img1.png';
 
 export default function CScards(){
@@ -105,8 +105,8 @@ export default function CScards(){
                                         <p className="d-flex justify-content-center pt-3 animate__animated animate__fadeInUp" style={{fontSize: "0.9em"}}>
                                             LittleSingapore was built to advertise a made-up theme park.
                                             The project aims to attract new customers, sell merchandise and efficiently provide information about the park. <br/><br/>
-                                            Skills required: <br/>JavaScript, HTML, CSS & Bootstrap<br/><br/>
-                                            Agile Methodology and Frameworks adpoted: <br/>Scrum, Object-Oriented-Programming
+                                            Skills required: <br/>JavaScript, HTML, CSS<br/><br/>
+                                            Agile Methodology and Frameworks adpoted: <br/>Scrum, Object-Oriented-Programming & Bootstrap
                                         </p>
                                     }
 
