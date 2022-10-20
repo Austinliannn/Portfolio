@@ -6,7 +6,7 @@ export default function Projcards(props) {
   return (
     <>
       {props.data.map((entry, index) => (
-        <Col key={index} xs={12} md={12} lg={4} xl={4} xxl={4} className="py-2">
+        <Col key={index} xs={12} md={12} lg={4} xl={4} xxl={4} className="d-flex justify-content-center align-items-center py-2">
           <Card
             className="animate__animated animate__fadeInLeft"
             style={{ minHeight: "23rem"}}
@@ -15,7 +15,7 @@ export default function Projcards(props) {
               variant="top"
               src={entry.img}
               style={{
-                height: "11rem",
+                height: "11.8rem",
                 borderBottomRightRadius: "5px",
                 borderBottomLeftRadius: "5px",
               }}
