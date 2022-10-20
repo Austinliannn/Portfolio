@@ -6,16 +6,16 @@ export default function Projcards(props) {
   return (
     <>
       {props.data.map((entry, index) => (
-        <Col key={index} xs={12} md={12} lg={4} xl={4} xxl={4} className="py-3">
+        <Col key={index} xs={12} md={12} lg={4} xl={4} xxl={4} className="py-2">
           <Card
             className="animate__animated animate__fadeInLeft"
-            style={{ minHeight: "23rem" }}
+            style={{ minHeight: "23rem"}}
           >
             <Card.Img
               variant="top"
               src={entry.img}
               style={{
-                height: "10rem",
+                height: "11rem",
                 borderBottomRightRadius: "5px",
                 borderBottomLeftRadius: "5px",
               }}
