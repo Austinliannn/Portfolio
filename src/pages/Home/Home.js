@@ -38,7 +38,7 @@ export default function Home() {
                 className="p-0 animate__animated animate__fadeInDown"
                 style={{ width: "96%" }}
               >
-                Over the past <b style={{ color: "#00ADB5" }}>3 years</b>, I
+                Over the past <b style={{ color: "#00ADB5" }}>few years</b>, I
                 have worked on projects to{" "}
                 <b style={{ color: "#00ADB5" }}>elevate my skills</b> as a
                 developer. I have also worked on dashboards to help my current

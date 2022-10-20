@@ -62,7 +62,7 @@ export default function Aboutme() {
           >
             <Row className="d-flex justify-content-center animate__animated animate__fadeInRight">
               <span className="p-0">
-                At the <b style={{ color: "#00ADB5" }}>age of 16</b>, I was
+                At the <b style={{ color: "#00ADB5" }}>age of 15</b>, I was
                 exposed to my first programming langauge which was C++. At that
                 time, I was introduced to robotics which sparked my{" "}
                 <b style={{ color: "#00ADB5" }}>
