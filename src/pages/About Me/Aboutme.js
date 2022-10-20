@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import * as FiIcons from "react-icons/fi";
 import * as BiIcons from "react-icons/bi";
-import header_pic from "../../assets/Images/head_shot.png";
+import header_pic from "../../assets/Images/head_shot.jpg";
 import css_logo from "../../assets/Images/SkillsLogo/css.png";
 import html_logo from "../../assets/Images/SkillsLogo/html.png";
 import js_logo from "../../assets/Images/SkillsLogo/js.png";

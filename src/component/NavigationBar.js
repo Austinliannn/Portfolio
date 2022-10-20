@@ -16,9 +16,9 @@ function Navigationbar() {
   return (
     <IconContext.Provider value={{ color: "white" }}>
       <div className="navbar">
-        <Col className="d-flex justify-content-left">
+        {/* <Col className="d-flex justify-content-left">
           <span style={{ color: "black" }}>Logo</span>
-        </Col>
+        </Col> */}
 
         <Col className="d-flex justify-content-end">
           <Link to="#" className="menu-bars">
