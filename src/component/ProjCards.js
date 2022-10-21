@@ -15,7 +15,7 @@ export default function Projcards(props) {
               variant="top"
               src={entry.img}
               style={{
-                height: "11.8rem",
+                height: "11.2rem",
                 borderBottomRightRadius: "5px",
                 borderBottomLeftRadius: "5px",
               }}

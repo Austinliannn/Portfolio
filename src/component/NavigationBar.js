@@ -27,12 +27,12 @@ function Navigationbar() {
         </Col>
       </div>
 
-      <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+      <nav className={sidebar ? "nav-menu active" : "nav-menu"} >
         <ul className="nav-menu-items" onClick={showSidebar}>
           <li className="navbar-toggle">
             <Link
               to="#"
-              className="menu-bars d-flex justify-content-end"
+              className="menu-bars"
               style={{ paddingRight: "10px" }}
             >
               <AiIcons.AiOutlineClose style={{ color: "white" }} />
