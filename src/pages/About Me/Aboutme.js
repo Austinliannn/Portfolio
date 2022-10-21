@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import * as FiIcons from "react-icons/fi";
-import * as BiIcons from "react-icons/bi";
 import header_pic from "../../assets/Images/head_shot.jpg";
 import css_logo from "../../assets/Images/SkillsLogo/css.png";
 import html_logo from "../../assets/Images/SkillsLogo/html.png";
@@ -13,6 +12,7 @@ import express_logo from "../../assets/Images/SkillsLogo/express.png";
 import nodejs_logo from "../../assets/Images/SkillsLogo/nodejs.png";
 import certification from "../../assets/Images/SkillsLogo/Certification_Web.png";
 import Contact from "../../component/Contact";
+import ScrollTop from "../../component/ScrollTop";
 
 export default function Aboutme() {
   const [mouseHoverJS, setMouseHoverJS] = useState(false);
@@ -23,7 +23,6 @@ export default function Aboutme() {
   const [mouseHoverEX, setMouseHoverEX] = useState(false);
   const [mouseHoverRE, setMouseHoverRE] = useState(false);
   const [mouseHoverNJS, setMouseHoverNJS] = useState(false);
-  const [onHover, setOnHover] = useState(false);
 
   return (
     <>
@@ -48,6 +47,7 @@ export default function Aboutme() {
             <img
               className="animate__animated animate__fadeIn"
               src={header_pic}
+              alt="Header Selfie"
               style={{ borderRadius: "40px", width: "58%" }}
             />
           </Col>
@@ -122,6 +122,7 @@ export default function Aboutme() {
                       : "animate__animated animate__pulse"
                   }
                   src={js_logo}
+                  alt="Javascript Logo"
                   style={{ width: "42%" }}
                   onMouseOver={() => setMouseHoverJS(!mouseHoverJS)}
                   onMouseOut={() => setMouseHoverJS(!mouseHoverJS)}
@@ -143,6 +144,7 @@ export default function Aboutme() {
                       : "animate__animated animate__pulse"
                   }
                   src={html_logo}
+                  alt="HTML Logo"
                   style={{ width: "42%" }}
                   onMouseOver={() => setMouseHoverHTML(!mouseHoverHTML)}
                   onMouseOut={() => setMouseHoverHTML(!mouseHoverHTML)}
@@ -164,6 +166,7 @@ export default function Aboutme() {
                       : "animate__animated animate__pulse"
                   }
                   src={css_logo}
+                  alt="CSS Logo"
                   style={{ width: "42%" }}
                   onMouseOver={() => setMouseHoverCSS(!mouseHoverCSS)}
                   onMouseOut={() => setMouseHoverCSS(!mouseHoverCSS)}
@@ -187,6 +190,7 @@ export default function Aboutme() {
                       : "animate__animated animate__pulse"
                   }
                   src={tailwind_css_logo}
+                  alt="Tailwind CSS Logo"
                   style={{ width: "42%" }}
                   onMouseOver={() => setMouseHoverTWCSS(!mouseHoverTWCSS)}
                   onMouseOut={() => setMouseHoverTWCSS(!mouseHoverTWCSS)}
@@ -208,6 +212,7 @@ export default function Aboutme() {
                       : "animate__animated animate__pulse"
                   }
                   src={mongodb_logo}
+                  alt="MongoDB Logo"
                   style={{ width: "42%" }}
                   onMouseOver={() => setMouseHoverMGDB(!mouseHoverMGDB)}
                   onMouseOut={() => setMouseHoverMGDB(!mouseHoverMGDB)}
@@ -229,6 +234,7 @@ export default function Aboutme() {
                       : "animate__animated animate__pulse"
                   }
                   src={express_logo}
+                  alt="Express Logo"
                   style={{ width: "42%" }}
                   onMouseOver={() => setMouseHoverEX(!mouseHoverEX)}
                   onMouseOut={() => setMouseHoverEX(!mouseHoverEX)}
@@ -252,6 +258,7 @@ export default function Aboutme() {
                       : "animate__animated animate__pulse"
                   }
                   src={react_logo}
+                  alt="React Logo"
                   style={{ width: "42%" }}
                   onMouseOver={() => setMouseHoverRE(!mouseHoverRE)}
                   onMouseOut={() => setMouseHoverRE(!mouseHoverRE)}
@@ -273,6 +280,7 @@ export default function Aboutme() {
                       : "animate__animated animate__pulse"
                   }
                   src={nodejs_logo}
+                  alt="NodeJS Logo"
                   style={{ width: "42%" }}
                   onMouseOver={() => setMouseHoverNJS(!mouseHoverNJS)}
                   onMouseOut={() => setMouseHoverNJS(!mouseHoverNJS)}
@@ -300,6 +308,7 @@ export default function Aboutme() {
             <Row className="d-flex justify-content-center pt-3">
               <img
                 src={certification}
+                alt="Certification"
                 style={{ borderRadius: "10px", width: "80%" }}
               />
             </Row>
@@ -323,23 +332,7 @@ export default function Aboutme() {
       </Container>
 
       <Container className="py-4">
-        <a href="#" className="d-flex justify-content-end">
-          <BiIcons.BiArrowToTop
-            className={
-              onHover
-                ? "animate__animated animate__heartBeat"
-                : "animate__animated animate__pulse"
-            }
-            style={{
-              fontSize: "1.6em",
-              color: "white",
-              backgroundColor: "#393E46",
-              borderRadius: "15px",
-            }}
-            onMouseOver={() => setOnHover(true)}
-            onMouseOut={() => setOnHover(false)}
-          />
-        </a>
+        <ScrollTop />
       </Container>
     </>
   );

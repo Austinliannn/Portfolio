@@ -1,6 +1,5 @@
 import Case1Img from "../../assets/Images/WorkGoWhere/FrontPage.png";
 import Case2Img from "../../assets/Images/LittleSingapore/FrontPage.png";
-import Case3Img from "../../assets/Images/DJApp-img1.png";
 
 export default function ProjectDetails() {
   const projects = [
@@ -29,15 +28,7 @@ export default function ProjectDetails() {
       github: "https://github.com/WebDevGroup101",
       read: "/projects/ls",
       skills: ["JavaScript", "HTML", "CSS", "BootStrap"],
-    },
-    // {
-    //     img: Case3Img,
-    //     title: "DJ Application",
-    //     description: "A software application that allow users to load music and mix-it up.",
-    //     github: "",
-    //     read: "/projects/djapplication",
-    //     skills: ["C++", "JUCE"]
-    // },
+    }
   ];
 
   return {

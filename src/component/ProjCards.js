@@ -39,7 +39,7 @@ export default function Projcards(props) {
               <Card.Text style={{ fontSize: "0.8em", minHeight: "3.6rem" }}>
                 Skills: <br />
                 {entry.skills.map((skill, index) =>
-                  index + 1 != entry.skills.length ? skill + ", " : skill
+                  index + 1 !== entry.skills.length ? skill + ", " : skill
                 )}
               </Card.Text>
 
@@ -49,6 +49,7 @@ export default function Projcards(props) {
               >
                 <a
                   href={entry.read}
+                  rel="noreferrer"
                   target="_blank"
                   className="d-flex justify-content-end"
                   style={{ color: "#222831" }}
@@ -58,6 +59,7 @@ export default function Projcards(props) {
                 &nbsp; &nbsp;
                 <a
                   href={entry.github}
+                  rel="noreferrer"
                   target="_blank"
                   className="d-flex justify-content-end"
                   style={{ color: "#222831" }}

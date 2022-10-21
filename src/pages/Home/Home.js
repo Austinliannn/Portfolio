@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Row, Col, Container } from "react-bootstrap";
 import "animate.css";
 import * as FiIcons from "react-icons/fi";
-import * as BiIcons from "react-icons/bi";
 import SelectedCards from "../../component/SelectedCards";
 import Contact from "../../component/Contact";
+import ScrollTop from "../../component/ScrollTop";
 
 export default function Home() {
-  const [onHover, setOnHover] = useState(false);
-
   return (
     <>
       <Container id="intro" className="pb-2">
@@ -125,23 +123,7 @@ export default function Home() {
       </Container>
 
       <Container className="py-4">
-        <a href="#" className="d-flex justify-content-end">
-          <BiIcons.BiArrowToTop
-            className={
-              onHover
-                ? "animate__animated animate__heartBeat"
-                : "animate__animated animate__pulse"
-            }
-            style={{
-              fontSize: "1.6em",
-              color: "white",
-              backgroundColor: "#393E46",
-              borderRadius: "15px",
-            }}
-            onMouseOver={() => setOnHover(true)}
-            onMouseOut={() => setOnHover(false)}
-          />
-        </a>
+        <ScrollTop />
       </Container>
     </>
   );

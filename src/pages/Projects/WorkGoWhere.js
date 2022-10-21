@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import * as FiIcons from "react-icons/fi";
 import * as BsIcons from "react-icons/bs";
-import * as BiIcons from "react-icons/bi";
 import WgwVidDemo from "../../assets/Videos/WorkGoWhere_Demo.mp4";
 import ReportPDF from "../../assets/PDF/Final_Assessment_Final.pdf";
 import LowFid from "../../assets/Images/WorkGoWhere/LowFid.png";
@@ -16,10 +15,9 @@ import OwnerPage from "../../assets/Images/WorkGoWhere/OwnerPage.png";
 import Dashboard from "../../assets/Images/WorkGoWhere/Dashboard.png";
 import ListingForm from "../../assets/Images/WorkGoWhere/ListingForm.png";
 import Contact from "../../component/Contact";
+import ScrollTop from "../../component/ScrollTop";
 
 export default function WorkGoWhere() {
-  const [onHover, setOnHover] = useState(false);
-
   return (
     <>
       <Container id="intro" className="pb-2">
@@ -140,6 +138,7 @@ export default function WorkGoWhere() {
           >
             <img
               src={WorkflowChart}
+              alt="WorkflowChart"
               style={{
                 borderRadius: "10px",
                 width: "96%",
@@ -285,6 +284,7 @@ export default function WorkGoWhere() {
               >
                 <img
                   src={LowFid}
+                  alt="Low Fidelity Wireframe"
                   style={{
                     borderRadius: "10px",
                     width: "90%",
@@ -320,6 +320,7 @@ export default function WorkGoWhere() {
               >
                 <img
                   src={HighFid}
+                  alt="High Fidelity Wireframe"
                   style={{
                     borderRadius: "10px",
                     width: "90%",
@@ -355,6 +356,7 @@ export default function WorkGoWhere() {
               >
                 <img
                   src={Mockup}
+                  alt="Mock Ups"
                   style={{
                     borderRadius: "10px",
                     width: "90%",
@@ -393,6 +395,7 @@ export default function WorkGoWhere() {
             >
               <img
                 src={FrontPage}
+                alt="Home Page"
                 style={{
                   borderRadius: "10px",
                   width: "95%",
@@ -411,6 +414,7 @@ export default function WorkGoWhere() {
             >
               <img
                 src={ResultsPage}
+                alt="Results Page"
                 style={{
                   borderRadius: "10px",
                   width: "95%",
@@ -429,6 +433,7 @@ export default function WorkGoWhere() {
             >
               <img
                 src={ResultDetails}
+                alt="Result Popup"
                 style={{
                   borderRadius: "10px",
                   width: "95%",
@@ -449,6 +454,7 @@ export default function WorkGoWhere() {
             >
               <img
                 src={OwnerPage}
+                alt="Space Owner Page"
                 style={{
                   borderRadius: "10px",
                   width: "95%",
@@ -468,6 +474,7 @@ export default function WorkGoWhere() {
             >
               <img
                 src={Dashboard}
+                alt="Dashboard Page"
                 style={{
                   borderRadius: "10px",
                   width: "95%",
@@ -487,6 +494,7 @@ export default function WorkGoWhere() {
             >
               <img
                 src={ListingForm}
+                alt="Form Page"
                 style={{
                   borderRadius: "10px",
                   width: "95%",
@@ -515,23 +523,7 @@ export default function WorkGoWhere() {
       </Container>
 
       <Container className="py-4">
-        <a href="#" className="d-flex justify-content-end">
-          <BiIcons.BiArrowToTop
-            className={
-              onHover
-                ? "animate__animated animate__heartBeat"
-                : "animate__animated animate__pulse"
-            }
-            style={{
-              fontSize: "1.6em",
-              color: "white",
-              backgroundColor: "#393E46",
-              borderRadius: "15px",
-            }}
-            onMouseOver={() => setOnHover(true)}
-            onMouseOut={() => setOnHover(false)}
-          />
-        </a>
+        <ScrollTop />
       </Container>
     </>
   );

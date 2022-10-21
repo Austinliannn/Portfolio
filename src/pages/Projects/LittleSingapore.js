@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import * as FiIcons from "react-icons/fi";
 import * as BsIcons from "react-icons/bs";
-import * as BiIcons from "react-icons/bi";
 import LsVidDemo from "../../assets/Videos/LittleSingapore_Demo.mp4";
 import Research from "../../assets/Images/LittleSingapore/Research.png";
 import DesktopWF from "../../assets/Images/LittleSingapore/DesktopWF.png";
@@ -12,10 +11,9 @@ import AttractionsPage from "../../assets/Images/LittleSingapore/AttractionsPage
 import InformationPage from "../../assets/Images/LittleSingapore/InformationPage.png";
 import BookNowPage from "../../assets/Images/LittleSingapore/BookNowPage.png";
 import Contact from "../../component/Contact";
+import ScrollTop from "../../component/ScrollTop";
 
 export default function LittleSingapore() {
-  const [onHover, setOnHover] = useState(false);
-
   return (
     <>
       <Container id="intro" className="pb-5">
@@ -121,6 +119,7 @@ export default function LittleSingapore() {
           >
             <img
               src={Research}
+              alt="Research"
               style={{
                 borderRadius: "10px",
                 width: "96%",
@@ -237,6 +236,7 @@ export default function LittleSingapore() {
               >
                 <img
                   src={DesktopWF}
+                  alt="Desktop Wireframe"
                   style={{
                     borderRadius: "10px",
                     width: "80%",
@@ -272,6 +272,7 @@ export default function LittleSingapore() {
               >
                 <img
                   src={MobileWF}
+                  alt="Mobile Wireframe"
                   style={{
                     borderRadius: "10px",
                     width: "68%",
@@ -313,6 +314,7 @@ export default function LittleSingapore() {
             >
               <img
                 src={FrontPage}
+                alt="Home Page"
                 style={{
                   borderRadius: "10px",
                   width: "82%",
@@ -331,6 +333,7 @@ export default function LittleSingapore() {
             >
               <img
                 src={AttractionsPage}
+                alt="Attractions Page"
                 style={{
                   borderRadius: "10px",
                   width: "82%",
@@ -351,6 +354,7 @@ export default function LittleSingapore() {
             >
               <img
                 src={InformationPage}
+                alt="Information Page"
                 style={{
                   borderRadius: "10px",
                   width: "82%",
@@ -369,6 +373,7 @@ export default function LittleSingapore() {
             >
               <img
                 src={BookNowPage}
+                alt="Book Now Page"
                 style={{
                   borderRadius: "10px",
                   width: "82%",
@@ -396,23 +401,7 @@ export default function LittleSingapore() {
       </Container>
 
       <Container className="py-4">
-        <a href="#" className="d-flex justify-content-end">
-          <BiIcons.BiArrowToTop
-            className={
-              onHover
-                ? "animate__animated animate__heartBeat"
-                : "animate__animated animate__pulse"
-            }
-            style={{
-              fontSize: "1.6em",
-              color: "white",
-              backgroundColor: "#393E46",
-              borderRadius: "15px",
-            }}
-            onMouseOver={() => setOnHover(true)}
-            onMouseOut={() => setOnHover(false)}
-          />
-        </a>
+        <ScrollTop />
       </Container>
     </>
   );

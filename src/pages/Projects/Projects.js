@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import * as FiIcons from "react-icons/fi";
-import * as BiIcons from "react-icons/bi";
 import ProjCards from "../../component/ProjCards";
 import Contact from "../../component/Contact";
 import ProjectDetails from "./ProjectDetails";
+import ScrollTop from "../../component/ScrollTop";
 
 export default function Projects() {
   let { projects } = ProjectDetails();
-
-  const [onHover, setOnHover] = useState(false);
 
   return (
     <>
@@ -45,23 +43,7 @@ export default function Projects() {
       </Container>
 
       <Container className="py-4">
-        <a href="#" className="d-flex justify-content-end">
-          <BiIcons.BiArrowToTop
-            className={
-              onHover
-                ? "animate__animated animate__heartBeat"
-                : "animate__animated animate__pulse"
-            }
-            style={{
-              fontSize: "1.6em",
-              color: "white",
-              backgroundColor: "#393E46",
-              borderRadius: "15px",
-            }}
-            onMouseOver={() => setOnHover(true)}
-            onMouseOut={() => setOnHover(false)}
-          />
-        </a>
+        <ScrollTop />
       </Container>
     </>
   );
