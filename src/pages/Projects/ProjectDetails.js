@@ -9,7 +9,7 @@ export default function ProjectDetails() {
       title: "WorkGoWhere",
       description: "A web application that connect individuals to work spaces.",
       github: "https://github.com/AgileProjectY2",
-      read: "/projects/workgowhere",
+      read: "/projects/wgw",
       skills: [
         "JavaScript",
         "HTML",
@@ -27,7 +27,7 @@ export default function ProjectDetails() {
       description:
         "A web application that provides information about a made-up themepark.",
       github: "https://github.com/WebDevGroup101",
-      read: "/projects/littlesingapore",
+      read: "/projects/ls",
       skills: ["JavaScript", "HTML", "CSS", "BootStrap"],
     },
     // {

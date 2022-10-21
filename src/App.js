@@ -21,11 +21,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/aboutme" element={<Aboutme />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/workgowhere" element={<WorkGoWhere />} />
-          <Route
-            path="/projects/littlesingapore"
-            element={<LittleSingapore />}
-          />
+          <Route path="/projects/wgw" element={<WorkGoWhere />} />
+          <Route path="/projects/ls" element={<LittleSingapore />} />
           {/* <Route path="/projects/djapplication" element={<DJApplication />} /> */}
         </Routes>
       </Router>
