@@ -49,7 +49,7 @@ export default function Projcards(props) {
               >
                 <a
                   href={entry.read}
-                  // target="_blank"
+                  target="_blank"
                   className="d-flex justify-content-end"
                   style={{ color: "#222831" }}
                 >
@@ -58,7 +58,7 @@ export default function Projcards(props) {
                 &nbsp; &nbsp;
                 <a
                   href={entry.github}
-                  // target="_blank"
+                  target="_blank"
                   className="d-flex justify-content-end"
                   style={{ color: "#222831" }}
                 >
