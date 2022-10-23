@@ -9,13 +9,13 @@ export default function Projcards(props) {
         <Col key={index} xs={12} md={12} lg={4} xl={4} xxl={4} className="d-flex justify-content-center align-items-center py-2">
           <Card
             className="animate__animated animate__fadeInLeft"
-            style={{ minHeight: "23rem"}}
+            style={{ minHeight: "26rem"}}
           >
             <Card.Img
               variant="top"
               src={entry.img}
               style={{
-                height: "11.2rem",
+                minHeight: "13.7rem",
                 borderBottomRightRadius: "5px",
                 borderBottomLeftRadius: "5px",
               }}

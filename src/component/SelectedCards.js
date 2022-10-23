@@ -86,7 +86,7 @@ export default function CScards() {
                   </Row>
 
                   {work1Hovered && (
-                    <p
+                    <span
                       className="d-flex justify-content-center pt-3 animate__animated animate__fadeInUp"
                       style={{ fontSize: "0.9em" }}
                     >
@@ -101,11 +101,11 @@ export default function CScards() {
                       <br />
                       Agile Methodology and Frameworks adpoted: <br />
                       Scrum, Kanban, MVC, MERN
-                    </p>
+                    </span>
                   )}
 
                   {work2Hovered && (
-                    <p
+                    <span
                       className="d-flex justify-content-center pt-3 animate__animated animate__fadeInUp"
                       style={{ fontSize: "0.9em" }}
                     >
@@ -120,7 +120,7 @@ export default function CScards() {
                       <br />
                       Agile Methodology and Frameworks adpoted: <br />
                       Scrum, Object-Oriented-Programming & Bootstrap
-                    </p>
+                    </span>
                   )}
                 </Col>
 
